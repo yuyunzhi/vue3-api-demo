@@ -1,18 +1,24 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
+  <LongList :data="data" :buffBottom="10" ></LongList>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+<script>
+import LongList from '../components/LongList.vue'
+export default {
+  components: { LongList },
+  setup() {
+    let data = Array(1000).fill(0).map((v, i) => `item-${i}`);
+    return {
+      data
+    }
+  }
+}
 
-export default defineComponent({
-  name: 'Home',
-  components: {
-    HelloWorld,
-  },
-});
 </script>
+
+<style>
+#app {
+  height: 80vh;
+}
+
+</style>
