@@ -41,6 +41,8 @@ export default {
       panel.value.style.height = data.length*itemHeight + 'px' // 计算获取展示的面板的高度
       count = Math.floor(container.value.offsetHeight / itemHeight) //计算面板展示的个数
       end.value =  count + buffBottom  // 计算初始化展示的下标
+
+      // 加BUFF 减少白屏等待加载时间
     });
     // let timer = null
     const onScroll = function (e) {
