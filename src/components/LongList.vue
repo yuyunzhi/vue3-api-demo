@@ -58,7 +58,8 @@ export default {
     };
 
     return {
-      visibleList, paddingTop, container, panel, onScroll};
+      visibleList, paddingTop, container, panel, onScroll
+    };
   }
 };
 </script>

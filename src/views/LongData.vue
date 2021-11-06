@@ -21,7 +21,7 @@ export default {
     })
     return {
       data,
-      showData:false
+      showData:true
     }
   }
 }
